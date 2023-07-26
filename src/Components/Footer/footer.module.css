@@ -19,6 +19,7 @@
 }
 
 .logo img {
+  justify-content: center;
   width: 100%;
 }
 
@@ -57,7 +58,7 @@
   display: flex;
   flex-direction: column;
   padding: 1rem 0;
-  width: 30vw;
+  width: 30%;
   color: white;
   cursor: default;
 }
@@ -73,7 +74,18 @@
   letter-spacing: 0.1rem;
 }
 
-.contactData a {
+.itemsContact {
+  display: flex;
+  flex-direction: column;
+}
+.iconsContact {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+
+.itemsContact a {
   display: flex;
   margin: 0;
   padding: 0.5rem;
@@ -81,15 +93,80 @@
   color: white;
   transition: 1s ease;
 }
-.contactData a:hover {
+.itemsContact a:hover {
   color: #157CAA;
   transition: 1s ease;
 }
 
-.contactData p {
+.itemsContact p {
   display: flex;
   align-items: center;
   margin: 0;
   padding: 0.5rem;
   transition: 1s ease;
+}
+
+.copyrightBottom {
+  display: flex;
+  justify-content: center;
+  width: 26vw;
+  display: none;
+}
+
+.copyrightBottom p {
+  font-size: 0.8rem;
+  color: white;
+  cursor: default;
+}
+
+@media screen and (max-width: 900px) {
+  .contactData {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 7vh;
+  }
+  .brand {
+    width: 80%;
+  }
+  .logo {
+    width: 70%;
+  }
+  .icons {
+    padding: 2rem 0 0 0;
+  }
+  .copyright {
+    display: none;
+  }
+  .paragraphText {
+    display: none;
+  }
+
+  .contactData {
+    align-items: center;
+    width: 80%;
+  }
+  .contactData h5 {
+    display: none;
+  }
+  .itemsContact {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .iconsContact {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 2rem 0 2rem 0;
+    width: 100%;
+  }
+
+  .copyrightBottom {
+    display: flex;
+  }
 }

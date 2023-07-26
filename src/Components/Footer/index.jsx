@@ -42,34 +42,49 @@ function Footer() {
             </a>
           </div>
           <div className={styles.copyright}>
-            <p>
-              &copy;Megarocket. All rights reserved &nbsp;&nbsp;|&nbsp;|&nbsp;&nbsp; Nai & Luchito
-              team.
-            </p>
+            <p>&nbsp;Blue Label&nbsp;&copy;&nbsp;2023</p>
           </div>
         </div>
         <div className={styles.contactData}>
           <h5>get in touch</h5>
-          <a
-            id="google-maps-bar-link"
-            target="_blank"
-            href="https://www.google.com/maps/place/C%C3%B3rdoba+2535,+S2000KZG+Rosario,+Santa+Fe/@-32.9429766,-60.6601152,17z/data=!4m5!3m4!1s0x95b7ab440630e631:0x1c43ee24c6347f71!8m2!3d-32.9431072!4d-60.6579802?entry=ttu"
-            rel="noreferrer"
-          >
-            <RoomIcon />
-            &nbsp;Cordoba 2535 - Rosario
-          </a>
-          <a id="phone-number-bar-link" href="tel:+543471616394" target="_blank" rel="noreferrer">
-            <LocalPhoneIcon />
-            &nbsp;341 - 0303456
-          </a>
-          <a id="mail-bar-link" target="_blank" href="mailto:dbninfi@gmail.com" rel="noreferrer">
-            <EmailIcon /> &nbsp;contact@megarocket.com
-          </a>
-          <p>
-            <ScheduleIcon />
-            &nbsp;Mon-Sat | 8AM-10PM
-          </p>
+          <div className={styles.itemsContact}>
+            <div className={styles.iconsContact}>
+              <a
+                id="google-maps-bar-link"
+                target="_blank"
+                href="https://www.google.com/maps/place/C%C3%B3rdoba+2535,+S2000KZG+Rosario,+Santa+Fe/@-32.9429766,-60.6601152,17z/data=!4m5!3m4!1s0x95b7ab440630e631:0x1c43ee24c6347f71!8m2!3d-32.9431072!4d-60.6579802?entry=ttu"
+                rel="noreferrer"
+              >
+                <RoomIcon />
+                <span className={styles.paragraphText}>&nbsp;Cordoba 2535 - Rosario</span>
+              </a>
+              <a
+                id="phone-number-bar-link"
+                href="tel:+5493471616394"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <LocalPhoneIcon />
+                <span className={styles.paragraphText}>&nbsp;+549 3471 - 616394</span>
+              </a>
+              <a
+                id="mail-bar-link"
+                target="_blank"
+                href="mailto:megarocket7@gmail.com"
+                rel="noreferrer"
+              >
+                <EmailIcon />
+                <span className={styles.paragraphText}>&nbsp;megarocket7@gmail.com</span>
+              </a>
+            </div>
+            <p>
+              <ScheduleIcon />
+              <span>&nbsp;Mon-Sat | 8AM-10PM</span>
+            </p>
+          </div>
+        </div>
+        <div className={styles.copyrightBottom}>
+          <p>&nbsp;Blue Label&nbsp;&copy;&nbsp;2023</p>
         </div>
       </footer>
     </>
