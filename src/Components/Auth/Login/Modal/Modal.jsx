@@ -106,7 +106,7 @@ export default function RecoveryModal({ handleClose, open }) {
             Recovery Password
           </Typography>
           <form onSubmit={handleSubmit(handleRecovery)} className={styles.recoveryForm}>
-            <FormControl sx={{ width: '18vw', minHeight: '6vh' }} variant="standard">
+            <FormControl sx={{ width: '18rem', minHeight: '6rem' }} variant="standard">
               <InputLabel htmlFor="standard-adornment-password">Email</InputLabel>
               <Input
                 id="recovery-password-input-email"
@@ -117,7 +117,7 @@ export default function RecoveryModal({ handleClose, open }) {
               />
               {errors['email'] && <p className={styles.errorText}>{errors['email'].message}</p>}
             </FormControl>
-            <FormControl sx={{ width: '18vw', minHeight: '6vh' }} variant="standard">
+            <FormControl sx={{ width: '18rem', minHeight: '6rem' }} variant="standard">
               <InputLabel htmlFor="standard-adornment-password">Repeat Email</InputLabel>
               <Input
                 id="recovery-password-input-repeat-email"
@@ -131,7 +131,7 @@ export default function RecoveryModal({ handleClose, open }) {
               )}
             </FormControl>
             <Button
-              sx={{ width: '18vw' }}
+              sx={{ width: '18rem' }}
               id="recovery-button-submit"
               type="submit"
               variant="contained"
