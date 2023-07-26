@@ -18,12 +18,10 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 400,
   bgcolor: 'background.paper',
   borderRadius: '10px',
-  border: 'none',
   boxShadow: 24,
-  p: 4
+  p: 2
 };
 
 const showToast = (message, type) => {
@@ -96,9 +94,9 @@ export default function RecoveryModal({ handleClose, open }) {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
+        <Box sx={style} className={styles.recoveryModal}>
           <Typography
-            sx={{ textAlign: 'center' }}
+            sx={{ textAlign: 'center', paddingTop: '1.5rem' }}
             id="recovery-modal-title"
             variant="h5"
             component="h2"
@@ -106,7 +104,7 @@ export default function RecoveryModal({ handleClose, open }) {
             Recovery Password
           </Typography>
           <form onSubmit={handleSubmit(handleRecovery)} className={styles.recoveryForm}>
-            <FormControl sx={{ width: '18vw', minHeight: '6vh' }} variant="standard">
+            <FormControl sx={{ width: '18rem', minHeight: '3rem' }} variant="standard">
               <InputLabel htmlFor="standard-adornment-password">Email</InputLabel>
               <Input
                 id="recovery-password-input-email"
@@ -117,7 +115,7 @@ export default function RecoveryModal({ handleClose, open }) {
               />
               {errors['email'] && <p className={styles.errorText}>{errors['email'].message}</p>}
             </FormControl>
-            <FormControl sx={{ width: '18vw', minHeight: '6vh' }} variant="standard">
+            <FormControl sx={{ width: '18rem', minHeight: '3rem' }} variant="standard">
               <InputLabel htmlFor="standard-adornment-password">Repeat Email</InputLabel>
               <Input
                 id="recovery-password-input-repeat-email"
@@ -131,7 +129,7 @@ export default function RecoveryModal({ handleClose, open }) {
               )}
             </FormControl>
             <Button
-              sx={{ width: '18vw' }}
+              sx={{ width: '18rem' }}
               id="recovery-button-submit"
               type="submit"
               variant="contained"

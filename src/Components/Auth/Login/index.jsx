@@ -4,7 +4,6 @@ import styles from './login.module.css';
 import { loginValidation } from 'Validations/Auth/login';
 import { joiResolver } from '@hookform/resolvers/joi';
 import { FaRegEye, FaEyeSlash } from 'react-icons/fa';
-import Container from 'Components/Shared/Container';
 import { getAuth, login } from 'Redux/auth/thunks';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
@@ -17,6 +16,7 @@ import InputAdornment from '@mui/material/InputAdornment';
 import IconButton from '@mui/material/IconButton';
 import FormControl from '@mui/material/FormControl';
 import RecoveryModal from './Modal/Modal';
+import { Box, Container, Typography } from '@mui/material';
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -110,99 +110,102 @@ const Login = () => {
   };
 
   return (
-    <Container isLogin={true}>
+    <Container
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: '100vh'
+      }}
+    >
       <Toaster />
-      <div className={styles.big}>
-        <div className={styles.container}>
-          <img
-            onClick={() => history.push('/landing')}
-            className={styles.logo}
-            src="/assets/images/logos/logo-black.png"
-            alt="MegaRocket Logo"
-          />
-          <h2>Sign In</h2>
-          <RecoveryModal
-            open={showModal}
-            handleClose={() => {
-              setShowModal(false);
-            }}
-          />
-          <form onSubmit={handleSubmit(handleLogin)} className={styles.formLogin}>
-            <div className={styles.inputsLogin}>
-              <FormControl sx={{ width: '20vw' }} variant="standard">
-                <InputLabel htmlFor="email">Email</InputLabel>
-                <Input
-                  id="login-input-email"
-                  name="email"
-                  error={errors['email'] ? true : false}
-                  {...register('email')}
-                  type={'text'}
-                />
-                {errors['email'] && (
-                  <p id="login-input-email-error" className={styles.errorText}>
-                    {errors['email'].message}
-                  </p>
-                )}
-              </FormControl>
-            </div>
-            <div className={styles.inputsLogin}>
-              <FormControl sx={{ width: '20vw' }} variant="standard">
-                <InputLabel htmlFor="password">Password</InputLabel>
-                <Input
-                  id="login-input-password"
-                  name="password"
-                  error={errors['password'] ? true : false}
-                  {...register('password')}
-                  type={showPassword ? 'text' : 'password'}
-                  endAdornment={
-                    <InputAdornment position="end">
-                      <IconButton
-                        id="login-eye-button"
-                        aria-label="toggle password visibility"
-                        onClick={() => setShowPassword(!showPassword)}
-                        edge="end"
-                      >
-                        {showPassword ? <FaEyeSlash size={15} /> : <FaRegEye size={15} />}
-                      </IconButton>
-                    </InputAdornment>
-                  }
-                />
-                {errors['password'] && (
-                  <p id="login-input-password-error" className={styles.errorText}>
-                    {errors['password'].message}
-                  </p>
-                )}
-              </FormControl>
-            </div>
-
-            <p className={styles.forgot}>
-              <a
-                id="login-button-forgot-password"
-                onClick={() => {
-                  setShowModal(true);
-                }}
-              >
-                Forgot Password
-              </a>{' '}
-              or{' '}
-              <a id="login-button-create-account" onClick={handleRegister}>
-                Create Account
-              </a>
-            </p>
-            <div className={styles.buttonContainer}>
-              <Button
-                sx={{ width: '10vw', fontSize: '18px' }}
-                id="login-button-submit"
-                type="submit"
-                variant="contained"
-                size="large"
-              >
-                Sign In
-              </Button>
-            </div>
-          </form>
-        </div>
-      </div>
+      <Box className={styles.loginContainer}>
+        <img
+          onClick={() => history.push('/landing')}
+          className={styles.logo}
+          src="/assets/images/logos/logo-black.png"
+          alt="MegaRocket Logo"
+        />
+        <Typography textAlign="center" fontSize="30px" component="h2">
+          Sign In
+        </Typography>
+        <RecoveryModal
+          open={showModal}
+          handleClose={() => {
+            setShowModal(false);
+          }}
+        />
+        <form onSubmit={handleSubmit(handleLogin)} className={styles.formLogin}>
+          <FormControl sx={{ width: '21rem', minHeight: '5.5rem' }} variant="standard">
+            <InputLabel htmlFor="email">Email</InputLabel>
+            <Input
+              id="login-input-email"
+              name="email"
+              error={errors['email'] ? true : false}
+              {...register('email')}
+              type={'text'}
+            />
+            {errors['email'] && (
+              <p id="login-input-email-error" className={styles.errorText}>
+                {errors['email'].message}
+              </p>
+            )}
+          </FormControl>
+          <FormControl sx={{ width: '21rem', minHeight: '5.5rem' }} variant="standard">
+            <InputLabel htmlFor="password">Password</InputLabel>
+            <Input
+              id="login-input-password"
+              name="password"
+              error={errors['password'] ? true : false}
+              {...register('password')}
+              type={showPassword ? 'text' : 'password'}
+              endAdornment={
+                <InputAdornment position="end">
+                  <IconButton
+                    id="login-eye-button"
+                    aria-label="toggle password visibility"
+                    onClick={() => setShowPassword(!showPassword)}
+                    edge="end"
+                  >
+                    {showPassword ? <FaEyeSlash size={15} /> : <FaRegEye size={15} />}
+                  </IconButton>
+                </InputAdornment>
+              }
+            />
+            {errors['password'] && (
+              <p id="login-input-password-error" className={styles.errorText}>
+                {errors['password'].message}
+              </p>
+            )}
+          </FormControl>
+          <p className={styles.forgot}>
+            <a
+              id="login-button-forgot-password"
+              onClick={() => {
+                setShowModal(true);
+              }}
+            >
+              Forgot Password
+            </a>{' '}
+            or{' '}
+            <a id="login-button-create-account" onClick={handleRegister}>
+              Create Account
+            </a>
+          </p>
+          <Box className={styles.buttonContainer}>
+            <Button
+              sx={{ width: '21rem', fontSize: '16px' }}
+              id="login-button-submit"
+              type="submit"
+              variant="contained"
+              size="large"
+            >
+              Sign In
+            </Button>
+          </Box>
+        </form>
+      </Box>
     </Container>
   );
 };
