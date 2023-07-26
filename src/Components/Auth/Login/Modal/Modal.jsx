@@ -23,7 +23,7 @@ const style = {
   borderRadius: '10px',
   border: 'none',
   boxShadow: 24,
-  p: 4
+  p: 2
 };
 
 const showToast = (message, type) => {
@@ -98,7 +98,7 @@ export default function RecoveryModal({ handleClose, open }) {
       >
         <Box sx={style}>
           <Typography
-            sx={{ textAlign: 'center' }}
+            sx={{ textAlign: 'center', paddingTop: '1.5rem' }}
             id="recovery-modal-title"
             variant="h5"
             component="h2"
@@ -106,7 +106,7 @@ export default function RecoveryModal({ handleClose, open }) {
             Recovery Password
           </Typography>
           <form onSubmit={handleSubmit(handleRecovery)} className={styles.recoveryForm}>
-            <FormControl sx={{ width: '18rem', minHeight: '6rem' }} variant="standard">
+            <FormControl sx={{ width: '18rem', minHeight: '3rem' }} variant="standard">
               <InputLabel htmlFor="standard-adornment-password">Email</InputLabel>
               <Input
                 id="recovery-password-input-email"
@@ -117,7 +117,7 @@ export default function RecoveryModal({ handleClose, open }) {
               />
               {errors['email'] && <p className={styles.errorText}>{errors['email'].message}</p>}
             </FormControl>
-            <FormControl sx={{ width: '18rem', minHeight: '6rem' }} variant="standard">
+            <FormControl sx={{ width: '18rem', minHeight: '3rem' }} variant="standard">
               <InputLabel htmlFor="standard-adornment-password">Repeat Email</InputLabel>
               <Input
                 id="recovery-password-input-repeat-email"

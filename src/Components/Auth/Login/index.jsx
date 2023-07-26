@@ -127,7 +127,7 @@ const Login = () => {
           src="/assets/images/logos/logo-black.png"
           alt="MegaRocket Logo"
         />
-        <Typography textAlign="center" variant="h4">
+        <Typography textAlign="center" variant="h4" component="h2">
           Sign In
         </Typography>
         <RecoveryModal
@@ -137,7 +137,7 @@ const Login = () => {
           }}
         />
         <form onSubmit={handleSubmit(handleLogin)} className={styles.formLogin}>
-          <FormControl sx={{ width: '20rem', minHeight: '5rem' }} variant="standard">
+          <FormControl sx={{ width: '21rem', minHeight: '5.5rem' }} variant="standard">
             <InputLabel htmlFor="email">Email</InputLabel>
             <Input
               id="login-input-email"
@@ -152,8 +152,7 @@ const Login = () => {
               </p>
             )}
           </FormControl>
-
-          <FormControl sx={{ width: '20rem', minHeight: '5rem' }} variant="standard">
+          <FormControl sx={{ width: '21rem', minHeight: '5.5rem' }} variant="standard">
             <InputLabel htmlFor="password">Password</InputLabel>
             <Input
               id="login-input-password"
@@ -180,7 +179,6 @@ const Login = () => {
               </p>
             )}
           </FormControl>
-
           <p className={styles.forgot}>
             <a
               id="login-button-forgot-password"
@@ -197,7 +195,7 @@ const Login = () => {
           </p>
           <Box className={styles.buttonContainer}>
             <Button
-              sx={{ width: '15rem', fontSize: '18px' }}
+              sx={{ width: '21rem', fontSize: '16px' }}
               id="login-button-submit"
               type="submit"
               variant="contained"
