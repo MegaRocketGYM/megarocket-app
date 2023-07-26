@@ -127,7 +127,7 @@ const Login = () => {
           src="/assets/images/logos/logo-black.png"
           alt="MegaRocket Logo"
         />
-        <Typography textAlign="center" variant="h4" component="h2">
+        <Typography textAlign="center" fontSize="30px" component="h2">
           Sign In
         </Typography>
         <RecoveryModal

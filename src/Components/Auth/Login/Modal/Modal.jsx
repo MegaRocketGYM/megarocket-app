@@ -96,7 +96,7 @@ export default function RecoveryModal({ handleClose, open }) {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
+        <Box className={styles.recoveryModal} sx={style}>
           <Typography
             sx={{ textAlign: 'center', paddingTop: '1.5rem' }}
             id="recovery-modal-title"
