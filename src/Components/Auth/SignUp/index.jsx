@@ -164,7 +164,7 @@ const SignUp = () => {
                 variant="contained"
                 type={'submit'}
                 id={'sing-up-button-add'}
-                sx={{ width: '10vw', fontSize: '16px' }}
+                sx={{ width: '18vw', fontSize: '16px' }}
               >
                 Sign up
               </Button>

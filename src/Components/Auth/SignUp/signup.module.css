@@ -53,7 +53,7 @@
 }
 
 .arrow {
-  margin-left: 31.76px;
+  margin-left: 2vw;
   cursor: pointer;
 }
 
@@ -69,4 +69,45 @@
 .buttonSignUp {
   display: flex;
   justify-content: center;
+  margin-top: 2vh;
+}
+
+@media (max-width: 900px) {
+  .imgSignUp {
+    display: none;
+  }
+
+  .head {
+    display: flex;
+    flex-direction: row;
+    width: 50vw;
+    margin-top: 30px;
+  }
+
+  .containerSignUp {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .arrow {
+    margin-left: 0;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 600px) {
+  .imgSignUp {
+    display: none;
+  }
+
+  .formMembers {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .formColumn:not(:last-child) {
+    margin-right: 0;
+  }
 }
