@@ -18,10 +18,8 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 400,
   bgcolor: 'background.paper',
   borderRadius: '10px',
-  border: 'none',
   boxShadow: 24,
   p: 2
 };
@@ -96,7 +94,7 @@ export default function RecoveryModal({ handleClose, open }) {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box className={styles.recoveryModal} sx={style}>
+        <Box sx={style} className={styles.recoveryModal}>
           <Typography
             sx={{ textAlign: 'center', paddingTop: '1.5rem' }}
             id="recovery-modal-title"

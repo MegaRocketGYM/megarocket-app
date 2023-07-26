@@ -50,6 +50,11 @@
   height: 20rem;
 }
 
+.recoveryModal {
+  border: none;
+  width: 25rem;
+}
+
 @media (max-width: 600px) {
   .big {
     flex-direction: column;
