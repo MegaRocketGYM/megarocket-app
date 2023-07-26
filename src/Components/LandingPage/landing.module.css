@@ -1,3 +1,7 @@
+.body {
+  width: 100vw;
+}
+
 .imgPortrait {
   display: flex;
   justify-content: center;
@@ -48,15 +52,17 @@
   cursor: default;
 }
 
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 900px) {
   .content {
-    width: 500px;
+    width: 80%;
     transition: 1s ease;
   }
+  .imgPortrait img {
+    object-position: left;
+  }
 }
-@media screen and (max-width: 601px) {
+@media screen and (max-width: 600px) {
   .content {
-    width: 300px;
     transition: 1s ease;
   }
 }

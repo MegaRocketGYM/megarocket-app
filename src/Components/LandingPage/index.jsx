@@ -14,7 +14,7 @@ const Landing = () => {
   };
 
   return (
-    <>
+    <div className={styles.body}>
       <Header />
       <div className={styles.container}>
         <div className={styles.imgPortrait}>
@@ -50,7 +50,7 @@ const Landing = () => {
         <ContactForm />
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 

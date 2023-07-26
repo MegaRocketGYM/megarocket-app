@@ -92,7 +92,7 @@
   line-height: 0.8;
 }
 
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 900px) {
   .joined {
     flex-direction: column;
   }
