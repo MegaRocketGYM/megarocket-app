@@ -7,7 +7,8 @@
   justify-content: center;
   width: 100vw;
   height: 90vh;
-  background-color: black;
+  background-image: url('/public/assets/images/landing/portrait.png');
+  background-size: cover;
 }
 
 .imgPortrait img {
@@ -62,6 +63,10 @@
   }
 }
 @media screen and (max-width: 600px) {
+  .imgPortrait {
+    background-image: url('/public/assets/images/landing/portrait600.jpg');
+    background-size: cover;
+  }
   .content {
     transition: 1s ease;
   }

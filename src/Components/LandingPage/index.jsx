@@ -18,7 +18,6 @@ const Landing = () => {
       <Header />
       <div className={styles.container}>
         <div className={styles.imgPortrait}>
-          <img src="/assets/images/landing/portrait.png" alt="gym image" />
           <div className={styles.overlay}>
             <div className={styles.content}>
               <img src="/assets/images/logos/logo-4.png" alt="gym image" />
