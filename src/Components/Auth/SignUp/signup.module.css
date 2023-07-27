@@ -1,3 +1,13 @@
+.signUpTitle {
+  display: none;
+}
+
+.logo {
+  width: 15vw;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
 .containerSignUp {
   display: flex;
   height: 100vh;
@@ -73,6 +83,16 @@
 }
 
 @media (max-width: 900px) {
+  .signUpTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .formMembers {
+    padding-top: 2vh;
+  }
+
   .imgSignUp {
     display: none;
   }
@@ -102,9 +122,16 @@
     display: none;
   }
 
+  .signUpTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .formMembers {
     flex-direction: column;
     align-items: center;
+    padding-top: 2vh;
   }
 
   .formColumn:not(:last-child) {

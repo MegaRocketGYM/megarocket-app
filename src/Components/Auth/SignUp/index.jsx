@@ -74,6 +74,15 @@ const SignUp = () => {
           <div className={styles.containerForm}></div>
 
           <form onSubmit={handleSubmit(onSubmit)}>
+            <div className={styles.signUpTitle}>
+              <img
+                onClick={() => history.push('/landing')}
+                className={styles.logo}
+                src="/assets/images/logos/logo-black.png"
+                alt="MegaRocket Logo"
+              />
+              <h2>Sign Up</h2>
+            </div>
             <div className={styles.formMembers}>
               <div className={styles.formColumn}>
                 <Input
