@@ -58,15 +58,12 @@
     width: 80%;
     transition: 1s ease;
   }
-  .imgPortrait img {
-    object-position: left;
-  }
-}
-@media screen and (max-width: 600px) {
   .imgPortrait {
     background-image: url('/public/assets/images/landing/portrait600.jpg');
     background-size: cover;
   }
+}
+@media screen and (max-width: 600px) {
   .content {
     transition: 1s ease;
   }
