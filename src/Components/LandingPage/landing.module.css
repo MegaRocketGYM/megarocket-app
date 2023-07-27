@@ -1,9 +1,14 @@
+.body {
+  width: 100vw;
+}
+
 .imgPortrait {
   display: flex;
   justify-content: center;
   width: 100vw;
   height: 90vh;
-  background-color: black;
+  background-image: url('/public/assets/images/landing/portrait.png');
+  background-size: cover;
 }
 
 .imgPortrait img {
@@ -48,15 +53,18 @@
   cursor: default;
 }
 
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 900px) {
   .content {
-    width: 500px;
+    width: 80%;
     transition: 1s ease;
   }
+  .imgPortrait {
+    background-image: url('/public/assets/images/landing/portrait600.jpg');
+    background-size: cover;
+  }
 }
-@media screen and (max-width: 601px) {
+@media screen and (max-width: 600px) {
   .content {
-    width: 300px;
     transition: 1s ease;
   }
 }

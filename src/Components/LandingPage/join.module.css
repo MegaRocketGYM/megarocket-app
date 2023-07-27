@@ -63,7 +63,7 @@
   border: none;
   background-image: url('/public/assets/images/landing/landing.png');
   background-size: cover;
-  background-position: top;
+  background-position: top right;
 }
 
 .landscape button {
@@ -92,11 +92,15 @@
   line-height: 0.8;
 }
 
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 900px) {
   .joined {
     flex-direction: column;
   }
   .dot {
     visibility: hidden;
+  }
+  .landscape {
+    background-image: url('/public/assets/images/landing/landing600.jpg');
+    background-position: center;
   }
 }

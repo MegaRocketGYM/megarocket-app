@@ -18,6 +18,8 @@
 }
 
 .icon {
+  display: flex;
+  flex-direction: column;
   color: white;
   font-size: 2rem;
   cursor: default;
@@ -25,7 +27,6 @@
   border-top: 2px solid white;
   padding: 0 5vw 5vh 5vw;
   margin-bottom: 5vh;
-  min-width: 200px;
   max-width: 300px;
   border-left: 2px solid transparent;
   border-right: 2px solid transparent;
@@ -65,4 +66,43 @@
 
 .runningContainer {
   background-image: url('/public/assets/images/landing/carrousel/running.jpg');
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    height: 80vh;
+  }
+  .icon {
+    width: 25vw;
+    align-items: center;
+  }
+  .icon h4 {
+    font-size: 1.2rem;
+    width: fit-content;
+  }
+  .icon p {
+    display: none;
+  }
+  .yogaContainer {
+    background-image: url('/public/assets/images/landing/carrousel/yoga900.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .buildContainer {
+    background-image: url('/public/assets/images/landing/carrousel/build900.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+  .runningContainer {
+    background-image: url('/public/assets/images/landing/carrousel/running900.jpg');
+    background-position: center;
+    background-size:cover;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container {
+    transition: 1s ease;
+    height: 70vh;
+  }
 }
